@@ -56,6 +56,9 @@
             <div class="first-video">
                 <div class="first-video__item">
                     <vturb-smartplayer id="vid-69a858cd008bc1bcb72b75fc" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/338731a2-9c8b-4c9f-ab42-0b4a844dfc50/players/69a858cd008bc1bcb72b75fc/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+                    <button class="first-video__pause hidden">
+                        <img src="img/pause.gif" alt="">
+                    </button>
                 </div>
 
                 <div class="first-video__disclaimer">
@@ -999,6 +1002,7 @@
             const offerPage = document.getElementById('offer-page');
             const showBottom = document.querySelector('.show-bottom');            
             const showFull = document.querySelector('.show-full');
+            const pauseGif = document.querySelector('.first-video__pause');
 
             document.querySelectorAll('.show-full__close, .show-full__decline').forEach((btn) => {
                 btn.addEventListener('click', () => {
@@ -1189,6 +1193,19 @@
                     }
                 });
 
+                player.addEventListener("video:pause", () => {
+                    pauseGif.classList.remove('hidden');
+                });
+
+                player.addEventListener("video:play", () => {
+                    pauseGif.classList.add('hidden');
+                });
+
+                pauseGif.addEventListener('click', () => {
+                    pauseGif.classList.add('hidden');
+                    player.play();
+                })
+
                 player.addEventListener("video:ended", () => {
                     console.log("[video->form] player ended event");
                     showFormHideVideo();
@@ -1206,9 +1223,7 @@
                     btn.addEventListener('click', () => {
                         pauseVideo();
                         startOfferTimer();
-
-                        firstPage.style.display = 'none';
-                        offerPage.style.display = '';
+                        showFormHideVideo()
                     });
                 });
             }
