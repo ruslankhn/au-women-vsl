@@ -16,11 +16,6 @@
         </symbol>
     </svg>
 
-    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; padding: 20px 0; position: relative; z-index: 9999;">
-        <button type="button" id="show-first-page">First page</button>
-        <button type="button" id="show-offer-page">Offer page</button>
-    </div>
-
     <header class="header">
         <div class="header__attention">
             <div class="header__attention-sticker">
@@ -59,7 +54,9 @@
             </div>
 
             <div class="first-video">
-                <div class="first-video__item"></div>
+                <div class="first-video__item">
+                    <vturb-smartplayer id="vid-69a858cd008bc1bcb72b75fc" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/338731a2-9c8b-4c9f-ab42-0b4a844dfc50/players/69a858cd008bc1bcb72b75fc/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+                </div>
 
                 <div class="first-video__disclaimer">
                     🔈 Please make sure your speakers are on. This may take 10 seconds to load. 🔈
@@ -423,7 +420,7 @@
                 </div>
             </div>
 
-            <div class="show-bottom">
+            <div class="show-bottom hidden">
                 <div class="show-bottom__content">
                     <div class="show-bottom__text">
                         <p class="show-bottom__text-top">BUY 3 + GET 2 FREE</p>
@@ -436,7 +433,7 @@
                 </div>
             </div>
 
-            <div class="show-full">
+            <div class="show-full hidden">
                 <div class="show-full__content">
                     <div class="show-full__close">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1000,24 +997,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             const firstPage = document.getElementById('first-page');
             const offerPage = document.getElementById('offer-page');
-
-            const showFirstBtn = document.getElementById('show-first-page');
-            const showOfferBtn = document.getElementById('show-offer-page');
-
-            if (!firstPage || !offerPage) return;
-
-            showFirstBtn.addEventListener('click', () => {
-                firstPage.style.display = '';
-                offerPage.style.display = 'none';
-            });
-
-            showOfferBtn.addEventListener('click', () => {
-                firstPage.style.display = 'none';
-                offerPage.style.display = '';
-            });
-
-
-
+            const showBottom = document.querySelector('.show-bottom');            
+            const showFull = document.querySelector('.show-full');
 
             document.querySelectorAll('.show-full__close, .show-full__decline').forEach((btn) => {
                 btn.addEventListener('click', () => {
@@ -1026,13 +1007,6 @@
                     if (block) {
                         block.style.display = 'none';
                     }
-                });
-            });
-
-            document.querySelectorAll('.show-full__button, .show-bottom__button').forEach((btn) => {
-                btn.addEventListener('click', () => {
-                    firstPage.style.display = 'none';
-                    offerPage.style.display = '';
                 });
             });
 
@@ -1092,7 +1066,6 @@
                 });
             });
 
-
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -1112,6 +1085,7 @@
             const minutesEl = document.querySelector('.offer-complete__timer-item-min');
             const secondsEl = document.querySelector('.offer-complete__timer-item-sec');
 
+            let timer = null;
             let timeLeft = 30 * 60;
 
             function updateTimer() {
@@ -1127,20 +1101,119 @@
                 }
             }
 
-            updateTimer();
-
-            const timer = setInterval(() => {
-                timeLeft--;
-
-                if (timeLeft <= 0) {
-                    timeLeft = 0;
-                    updateTimer();
-                    clearInterval(timer);
-                    return;
-                }
+            function startOfferTimer() {
+                if (timer) return;
 
                 updateTimer();
-            }, 1000);
+
+                timer = setInterval(() => {
+                    timeLeft--;
+
+                    if (timeLeft <= 0) {
+                        timeLeft = 0;
+                        updateTimer();
+                        clearInterval(timer);
+                        timer = null;
+                        return;
+                    }
+
+                    updateTimer();
+                }, 1000);
+            }
+
+            const EXPIRATION_DAYS = 14;
+
+            const videoWrap = firstPage;
+            const formWrap = offerPage;
+
+            const alreadyDoneKey = "videoFinished_showForm_v2";
+
+            class StorageHandler {
+                static expiryTime = EXPIRATION_DAYS * 86400000;
+                static set(key, value) {
+                    localStorage.setItem(key, JSON.stringify({
+                        value,
+                        expiry: Date.now() + this.expiryTime
+                    }));
+                }
+                static get(key) {
+                    const item = localStorage.getItem(key);
+                    if (!item) return null;
+                    try {
+                        const { value, expiry } = JSON.parse(item);
+                        if (Date.now() > expiry) {
+                            localStorage.removeItem(key);
+                            return null;
+                        }
+                        return value;
+                    } catch (e) {
+                        localStorage.removeItem(key);
+                        return null;
+                    }
+                }
+            }
+
+            function showFormHideVideo() {
+                console.log("[video->form] showFormHideVideo() fired");
+                if (videoWrap) videoWrap.style.display = "none";
+                if (formWrap) formWrap.style.display = "block";
+                StorageHandler.set(alreadyDoneKey, true);
+            }
+
+            // Если уже “досматривал” — сразу показываем форму
+            if (StorageHandler.get(alreadyDoneKey)) {
+                console.log("[video->form] already done, show immediately");
+                setTimeout(showFormHideVideo, 50);
+                return;
+            }
+
+            let attempts = 0;
+
+            function bindToPlayer() {
+                const player = document.querySelector("vturb-smartplayer");
+                console.log("[video->form] bound to smartplayer instance");
+
+                player.addEventListener("video:timeupdate", (event) => {
+                    const currentTime =
+                        event.detail?.currentTime ??
+                        event.detail?.time ??
+                        event.detail?.current ??
+                        0;
+
+                    if (currentTime >= 120) {
+                        showBottom.classList.remove('hidden');
+                    }
+
+                    if (currentTime >= 240) {
+                        showFull.classList.remove('hidden');
+                    }
+                });
+
+                player.addEventListener("video:ended", () => {
+                    console.log("[video->form] player ended event");
+                    showFormHideVideo();
+                    startOfferTimer();
+                });
+
+                function pauseVideo() {
+                    if (player && typeof player.pause === "function") {
+                        player.pause();
+                        return;
+                    }
+                }
+
+                document.querySelectorAll('.show-full__button, .show-bottom__button').forEach((btn) => {
+                    btn.addEventListener('click', () => {
+                        pauseVideo();
+                        startOfferTimer();
+
+                        firstPage.style.display = 'none';
+                        offerPage.style.display = '';
+                    });
+                });
+            }
+
+            bindToPlayer();
         });
     </script>
 </body>
