@@ -1029,6 +1029,13 @@
                 });
             });
 
+            document.querySelectorAll('.show-full__button, .show-bottom__button').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    firstPage.style.display = 'none';
+                    offerPage.style.display = '';
+                });
+            });
+
             document.querySelectorAll('.offer-comments__rev-buttons').forEach((buttonsBlock) => {
                 const likeBtn = buttonsBlock.querySelector('.offer-comments__rev-button-like');
                 const dislikeBtn = buttonsBlock.querySelector('.offer-comments__rev-button-dislike');
