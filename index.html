@@ -1019,6 +1019,15 @@
 
 
 
+            document.querySelectorAll('.show-full__close, .show-full__decline').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const block = btn.closest('.show-full');
+
+                    if (block) {
+                        block.style.display = 'none';
+                    }
+                });
+            });
 
             document.querySelectorAll('.offer-comments__rev-buttons').forEach((buttonsBlock) => {
                 const likeBtn = buttonsBlock.querySelector('.offer-comments__rev-button-like');
@@ -1075,6 +1084,7 @@
                     vote = 'dislike';
                 });
             });
+
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
