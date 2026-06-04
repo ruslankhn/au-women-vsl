@@ -1043,6 +1043,14 @@ label {
     display: none;
 }
 
+.offer-comments__right {
+    display: none;
+}
+
+.offer-comments__center .offer-comments__rev-stars, .offer-comments__rev-center-title {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .header {
 
@@ -1140,4 +1148,229 @@ label {
             max-width: 568px;
         }
     }
+
+    .show-bottom {
+        
+        &__content {
+            max-width: 600px;
+        }
+
+        &__button {
+            padding: 8px 62px;
+        }
+    }
+
+    .show-full {
+
+        &__content {
+            padding: 64px 32px 24px;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__subtitle {
+
+            & span {
+                display: inline;
+            }
+        }
+
+        &__button {
+            width: 100%;
+            margin-bottom: 88px;
+        }
+    }
+
+    .offer-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        margin: 48px 0 64px;
+    }
+
+    .offer-complete {
+        max-width: 448px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        &__discount {
+            padding: 20px 16px 24px;
+        }
+
+        &__leaf-left {
+            width: 68px;
+            height: 92px;
+            top: 181px;
+            left: -5px;
+        }
+
+        &__leaf-right {
+            width: 46px;
+            height: 62px;
+            top: 117px;
+        }
+
+        &__title {
+            font-size: 40px;
+
+            & span {
+                display: inline;
+            }
+        }
+
+        &__link {
+            max-width: 324px;
+            padding: 0;
+        }
+    }
+
+    .offer-take-back {
+        gap: 18px;
+        max-width: 522px;
+        padding-right: 0;
+
+        &__img {
+            width: 217px;
+            height: 340px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__line {
+            width: 212px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            line-height: 130%;
+        }
+
+        &__link {
+            padding: 16px 0;
+        }
+    }
+
+    .offer-comments {
+
+        &__title {
+            max-width: 425px;
+            margin-bottom: 14px;
+            font-size: 32px;
+        }
+
+        &__rating {
+            margin-bottom: 24px;
+        }
+
+        &__link-images {
+            max-width: 1000px;
+        }
+
+        &__rev {
+            display: flex;
+            flex-direction: row;
+            max-width: 1000px;
+            padding: 32px 0 0;
+            
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+
+            &:last-child {
+                padding-bottom: 32px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.102);
+            }
+        }
+
+        &__left {
+            flex-shrink: 0;
+            padding: 32px 24px;
+            border-right: 1px solid rgba(0, 0, 0, 0.102);
+        }
+
+        &__rev-top {
+            margin-bottom: 108px;
+            padding: 0;
+
+            .offer-comments__rev-stars {
+                display: none;
+            }
+        }
+
+        &__rev-recommend {
+            padding: 0;
+        }
+
+        &__center {
+            display: flex;
+            flex-direction: column;
+            padding: 0 24px;
+            border-right: 1px solid rgba(0, 0, 0, 0.102);
+
+            .offer-comments__rev-images {
+                display: none;
+            }
+
+            .offer-comments__rev-stars {
+                display: block;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__rev-center-title {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &__rev-helpful {
+            margin-top: auto;
+            padding: 0;
+        }
+
+        &__rev-text-wrapper {
+            padding: 0;
+        }
+
+        &__rev-text {
+            padding: 0;
+            border-top: none;
+        }
+
+        &__right {
+            display: flex;
+            justify-content: flex-end;
+            flex-shrink: 0;
+            width: 272px;
+
+            .offer-comments__rev-images {
+                margin-bottom: 0;
+                padding: 0;
+
+                & img {
+                    width: 120px;
+                    height: 120px;
+                    max-width: unset;
+                }
+            }
+        }
+    }
+
+    .offer-footer {
+        padding: 0;
+        border-top: unset;
+
+        & img {         
+            width: 100%;   
+            max-width: 1648px;
+        }
+    }    
 }
