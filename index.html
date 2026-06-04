@@ -36,7 +36,7 @@
     </header>
 
     <main>
-        <section id="first-page" style="display: none;">
+        <section id="first-page">
             <div class="first-header">
                 <h1 class="first-header__title">
                     "If you`re over 55 and still wearing pads every day - your doctor has been keeping something from you"
@@ -436,7 +436,7 @@
                 </div>
             </div>
 
-            <div class="show-full">
+            <div class="show-full hidden">
                 <div class="show-full__content">
                     <div class="show-full__close">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -451,7 +451,7 @@
             </div>
         </section>
 
-        <section id="offer-page">
+        <section id="offer-page" style="display: none;">
             <div class="offer-top">
                 <div class="offer-complete">
                     <div class="offer-complete__top">
@@ -1159,6 +1159,7 @@
                 if (videoWrap) videoWrap.style.display = "none";
                 if (formWrap) formWrap.style.display = "block";
                 StorageHandler.set(alreadyDoneKey, true);
+                window.scrollTo(0, 0);
             }
 
             // Если уже “досматривал” — сразу показываем форму
