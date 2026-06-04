@@ -681,6 +681,7 @@ label {
   font-size: 22px;
   color: #FFFFFF;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 .offer-take-back__link span {
   padding-bottom: 3px;
