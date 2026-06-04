@@ -6,8 +6,8 @@
     <meta name="text-scale" content="scale">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Australian Women's Health Institute</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://t.contentsquare.net/uxa/e198ab5a6b5fe.js"></script>
 </head>
 <body>
     <svg style="display: none;" aria-hidden="true">
@@ -49,7 +49,7 @@
                         LIVE:
                     </div>
 
-                    <p class="first-header__watching">10,786 women watching now...</p>
+                    <p class="first-header__watching"><span class="watch-counter">10,786</span> women watching now...</p>
                 </div>
             </div>
 
@@ -662,7 +662,9 @@
                             <p class="offer-comments__rev-text"> Didn't tell anyone I ordered it. Just quietly tried it. After about ten days my husband asked if I seemed different lately. Said I seemed more relaxed. I hadn't told him why. I think that says everything. </p>
                         </div>
                         <div class="offer-comments__rev-images">
-                            <img alt="Ava Hill" src="img/reviews/ava-img-1.jpg" />
+                            <a href="video/ava.mp4" class="glightbox2" data-gallery="video-ava1">
+                                <img alt="Ava Hill" src="img/reviews/ava-img-1.jpg"/>
+                            </a>
                             <img alt="Ava Hill" src="img/reviews/ava-img-2.jpg" />
                         </div>
                         <div class="offer-comments__rev-helpful">
@@ -685,7 +687,9 @@
                     </div>
                     <div class="offer-comments__right">
                         <div class="offer-comments__rev-images">
-                            <img alt="Ava Hill" src="img/reviews/ava-img-1.jpg" />
+                            <a href="video/ava.mp4" class="glightbox2" data-gallery="video-ava2">
+                                <img alt="Ava Hill" src="img/reviews/ava-img-1.jpg"/>
+                            </a>
                             <img alt="Ava Hill" src="img/reviews/ava-img-2.jpg" />
                         </div>
                     </div>
@@ -835,7 +839,9 @@
                         </div>
                         <div class="offer-comments__rev-images">
                             <img alt="Susan Miller" src="img/reviews/susan-img-1.jpg" />
-                            <img alt="Susan Miller" src="img/reviews/susan-img-2.jpg" />
+                            <a href="video/susan.mp4" class="glightbox2" data-gallery="video-susan1">
+                                <img alt="Susan Miller" src="img/reviews/susan-img-2.jpg"/>
+                            </a>
                         </div>
                         <div class="offer-comments__rev-helpful">
                             <span> Was this helpful? </span>
@@ -858,7 +864,9 @@
                     <div class="offer-comments__right">
                         <div class="offer-comments__rev-images">
                             <img alt="Susan Miller" src="img/reviews/susan-img-1.jpg" />
-                            <img alt="Susan Miller" src="img/reviews/susan-img-2.jpg" />
+                            <a href="video/susan.mp4" class="glightbox2" data-gallery="video-susan2">
+                                <img alt="Susan Miller" src="img/reviews/susan-img-2.jpg"/>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -892,7 +900,9 @@
                             <p class="offer-comments__rev-text"> Just turned 61 and this started after menopause. My hormone levels came back low which my doctor said explained a lot. She actually said the ingredients in this made sense from a hormonal inflammation standpoint. That was enough for me. </p>
                         </div>
                         <div class="offer-comments__rev-images">
-                            <img alt="Diane Foster" src="img/reviews/diane-img-1.jpg" />
+                            <a href="video/diane.mp4" class="glightbox2" data-gallery="video-diane1">
+                                <img alt="Diane Foster" src="img/reviews/diane-img-1.jpg"/>
+                            </a>
                             <img alt="Diane Foster" src="img/reviews/diane-img-2.jpg" />
                         </div>
                         <div class="offer-comments__rev-helpful">
@@ -915,7 +925,9 @@
                     </div>
                     <div class="offer-comments__right">
                         <div class="offer-comments__rev-images">
-                            <img alt="Diane Foster" src="img/reviews/diane-img-1.jpg" />
+                            <a href="video/diane.mp4" class="glightbox2" data-gallery="video-diane2">
+                                <img alt="Diane Foster" src="img/reviews/diane-img-1.jpg"/>
+                            </a>
                             <img alt="Diane Foster" src="img/reviews/diane-img-2.jpg" />
                         </div>
                     </div>
@@ -995,6 +1007,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            GLightbox({
+                selector: '.glightbox2',
+                touchNavigation: false,
+                keyboardNavigation: false,
+                loop: false,
+                autoplayVideos: true,
+                plyr: {
+                    config: {
+                        ratio: '9:16'
+                    }
+                },
+            });
+
             const firstPage = document.getElementById('first-page');
             const offerPage = document.getElementById('offer-page');
             const showBottom = document.querySelector('.show-bottom');            
@@ -1083,9 +1108,9 @@
                 });
             });
 
+            // timer
             const minutesEl = document.querySelector('.offer-complete__timer-item-min');
             const secondsEl = document.querySelector('.offer-complete__timer-item-sec');
-
             let timer = null;
             let timeLeft = 30 * 60;
 
@@ -1121,7 +1146,36 @@
                     updateTimer();
                 }, 1000);
             }
+            // timer
 
+            // counter
+            const counter = document.querySelector('.watch-counter');
+            let counterValue = Number(counter.textContent.replace(/\D/g, ''));
+
+            function numberFormat(num) {
+                return num.toLocaleString('en-US');
+            }
+
+            function counterUpdate() {
+                const shouldGrow = Math.random() < 0.7;
+
+                if (shouldGrow) {
+                    counterValue += Math.floor(Math.random() * 6) + 1;
+                } else {
+                    counterValue -= Math.floor(Math.random() * 3) + 1;
+                }
+
+                counterValue = Math.max(0, counterValue);
+                counter.textContent = numberFormat(counterValue);
+
+                const counterUpdateTime = Math.floor(Math.random() * 3000) + 2000;
+                setTimeout(counterUpdate, counterUpdateTime);
+            }
+
+            setTimeout(counterUpdate, 1500);
+            // counter
+
+            //video
             const EXPIRATION_DAYS = 14;
 
             const videoWrap = firstPage;
@@ -1230,5 +1284,6 @@
             bindToPlayer();
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 </body>
 </html>

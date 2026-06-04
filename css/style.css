@@ -732,6 +732,10 @@ label {
   flex-shrink: 0;
   width: 164px;
   height: 164px;
+  transition: 0.2s ease all;
+}
+.offer-comments__link-images-item:hover {
+  filter: brightness(1.2);
 }
 .offer-comments__link-images-item-image {
   width: 100%;
@@ -810,6 +814,17 @@ label {
   gap: 8px;
   margin-bottom: 16px;
   padding: 0 16px;
+}
+.offer-comments__rev-images a {
+  transition: all 0.2s ease;
+}
+.offer-comments__rev-images a img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+.offer-comments__rev-images a:hover {
+  filter: brightness(1.4);
 }
 .offer-comments__rev-images img {
   max-width: 50%;
@@ -1133,6 +1148,10 @@ label {
     display: block;
     margin-bottom: 16px;
   }
+  .offer-comments__rev-images a {
+    width: 120px;
+    height: 120px;
+  }
   .offer-comments__rev-center-title {
     display: block;
     margin-bottom: 6px;
@@ -1174,6 +1193,9 @@ label {
     width: 100%;
     max-width: 1648px;
   }
+}
+.goverlay {
+  height: calc(100vh + 200px);
 }
 
 /*# sourceMappingURL=style.css.map */
