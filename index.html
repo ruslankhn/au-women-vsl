@@ -1166,6 +1166,7 @@
             if (StorageHandler.get(alreadyDoneKey)) {
                 console.log("[video->form] already done, show immediately");
                 setTimeout(showFormHideVideo, 50);
+                startOfferTimer();
                 return;
             }
 
