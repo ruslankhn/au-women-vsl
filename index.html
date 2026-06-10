@@ -998,12 +998,14 @@
             const showFull = document.querySelector('.show-full');
             const pauseGif = document.querySelector('.first-video__pause');
 
-            document.querySelector('.show-full__no-thanks').addEventListener('click', () => {
-                showFull.classList.remove('show-full__anim');
+            document.querySelectorAll('.show-full__no-thanks, .show-full__close').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    showFull.classList.remove('show-full__anim');
 
-                setTimeout(() => {
-                    showFull.style.display = 'none';
-                }, 200);
+                    setTimeout(() => {
+                        showFull.style.display = 'none';
+                    }, 200);
+                });
             });
 
             document.querySelectorAll('.offer-comments__rev-buttons').forEach((buttonsBlock) => {
