@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <script>
-        const timeToPopup = 5 * 1;
+        const timeToPopup = 5 * 60;
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1202,6 +1202,8 @@
                 const player = document.querySelector("vturb-smartplayer");
                 console.log("[video->form] bound to smartplayer instance");
 
+                let isPopupShown = false;
+
                 player.addEventListener("video:timeupdate", (event) => {
                     const currentTime =
                         event.detail?.currentTime ??
@@ -1209,7 +1211,8 @@
                         event.detail?.current ??
                         0;
 
-                    if (currentTime >= timeToPopup) {
+                    if (!isPopupShown && currentTime >= timeToPopup) {
+                        isPopupShown = true;
                         showFull.classList.add('show-full__anim');
                     }
                 });
