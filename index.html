@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        const timeToPopup = 5 * 1;
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="text-scale" content="scale">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <title>Australian Women's Health Institute</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "x2awfn0ioh");
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <svg style="display: none;" aria-hidden="true">
-        <symbol id="like" viewBox="0 0 16 16">
-            <path d="M7.31651 1.72254C7.31646 1.58452 7.34233 1.44785 7.39264 1.32032C7.44296 1.19279 7.51674 1.0769 7.60976 0.97929C7.70279 0.881676 7.81324 0.804241 7.9348 0.75141C8.05637 0.698579 8.18667 0.671387 8.31825 0.671387C9.28667 0.671387 10.0717 1.49474 10.0717 2.51034V5.14147C10.0717 5.16145 10.0754 5.18124 10.0827 5.1997C10.09 5.21816 10.1007 5.23494 10.1141 5.24907C10.1276 5.2632 10.1436 5.27441 10.1612 5.28205C10.1788 5.2897 10.1977 5.29364 10.2167 5.29364H12.7955C14.2204 5.29364 15.2707 6.69071 14.9382 8.14412L14.2814 11.0137C14.1082 11.771 13.6969 12.4449 13.1139 12.927C12.5309 13.4092 11.8101 13.6714 11.0676 13.6714H6.76652C6.5474 13.6714 6.33724 13.5801 6.1823 13.4176C6.02736 13.255 5.94031 13.0346 5.94031 12.8048V7.5564C5.94031 6.92845 6.07964 6.30923 6.34738 5.74773L6.75761 4.88716C7.12573 4.11491 7.31719 3.2633 7.3168 2.39991L7.31651 1.72254ZM3.10157 6.44392C2.8094 6.44396 2.52921 6.56573 2.32263 6.78243C2.11605 6.99914 2 7.29304 2 7.59949V12.5107C2 12.8172 2.11607 13.1111 2.32268 13.3278C2.52929 13.5445 2.80952 13.6663 3.10171 13.6663H4.20342C4.34952 13.6663 4.48963 13.6054 4.59294 13.497C4.69624 13.3887 4.75428 13.2417 4.75428 13.0885V7.02171C4.75428 6.94582 4.74003 6.87067 4.71233 6.80056C4.68464 6.73045 4.64405 6.66675 4.59289 6.6131C4.54172 6.55945 4.48098 6.51689 4.41413 6.48786C4.34728 6.45884 4.27563 6.4439 4.20328 6.44392H3.10157Z"/>
+        <symbol id="like" viewbox="0 0 16 16">
+            <path d="M7.31651 1.72254C7.31646 1.58452 7.34233 1.44785 7.39264 1.32032C7.44296 1.19279 7.51674 1.0769 7.60976 0.97929C7.70279 0.881676 7.81324 0.804241 7.9348 0.75141C8.05637 0.698579 8.18667 0.671387 8.31825 0.671387C9.28667 0.671387 10.0717 1.49474 10.0717 2.51034V5.14147C10.0717 5.16145 10.0754 5.18124 10.0827 5.1997C10.09 5.21816 10.1007 5.23494 10.1141 5.24907C10.1276 5.2632 10.1436 5.27441 10.1612 5.28205C10.1788 5.2897 10.1977 5.29364 10.2167 5.29364H12.7955C14.2204 5.29364 15.2707 6.69071 14.9382 8.14412L14.2814 11.0137C14.1082 11.771 13.6969 12.4449 13.1139 12.927C12.5309 13.4092 11.8101 13.6714 11.0676 13.6714H6.76652C6.5474 13.6714 6.33724 13.5801 6.1823 13.4176C6.02736 13.255 5.94031 13.0346 5.94031 12.8048V7.5564C5.94031 6.92845 6.07964 6.30923 6.34738 5.74773L6.75761 4.88716C7.12573 4.11491 7.31719 3.2633 7.3168 2.39991L7.31651 1.72254ZM3.10157 6.44392C2.8094 6.44396 2.52921 6.56573 2.32263 6.78243C2.11605 6.99914 2 7.29304 2 7.59949V12.5107C2 12.8172 2.11607 13.1111 2.32268 13.3278C2.52929 13.5445 2.80952 13.6663 3.10171 13.6663H4.20342C4.34952 13.6663 4.48963 13.6054 4.59294 13.497C4.69624 13.3887 4.75428 13.2417 4.75428 13.0885V7.02171C4.75428 6.94582 4.74003 6.87067 4.71233 6.80056C4.68464 6.73045 4.64405 6.66675 4.59289 6.6131C4.54172 6.55945 4.48098 6.51689 4.41413 6.48786C4.34728 6.45884 4.27563 6.4439 4.20328 6.44392H3.10157Z"></path>
         </symbol>
     </svg>
 
@@ -29,8 +40,8 @@
 
         <div class="header__logo">
             <picture>
-                <source srcset="img/header-logo-desk.png" media="(min-width: 768px)" />
-                <img src="img/header-logo.png" alt="Australian Women's Health Institute" />
+                <source srcset="./img/header-logo-desk.png" media="(min-width: 768px)"></source>
+                <img src="./img/header-logo.png" alt="Australian Women's Health Institute">
             </picture>
         </div>
     </header>
@@ -39,7 +50,7 @@
         <section id="first-page">
             <div class="first-header">
                 <h1 class="first-header__title">
-                    "If you`re over 55 and still wearing pads every day - your doctor has been keeping something from you"
+                    "Over 45,000 Australian women over 55 have quietly stopped wearing pads - without surgery, without prescriptions, in just 14 days"
                 </h1>
 
                 <div class="first-header__live">
@@ -55,9 +66,9 @@
 
             <div class="first-video">
                 <div class="first-video__item">
-                    <vturb-smartplayer id="vid-6a0f019ed73d7a41257a1c3c" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/338731a2-9c8b-4c9f-ab42-0b4a844dfc50/players/6a0f019ed73d7a41257a1c3c/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+                    <vturb-smartplayer id="vid-69a858cd008bc1bcb72b75fc" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/338731a2-9c8b-4c9f-ab42-0b4a844dfc50/players/69a858cd008bc1bcb72b75fc/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
                     <button class="first-video__pause hidden">
-                        <img src="img/pause.gif" alt="">
+                        <img src="./img/pause.gif" alt="">
                     </button>
                 </div>
 
@@ -68,37 +79,37 @@
 
             <div class="first-logos">
                 <picture>
-                    <source srcset="img/logos-desk.png" media="(min-width: 768px)" />
-                    <img src="img/logos.png" alt="Study Logotypes" />
+                    <source srcset="./img/logos-desk.png" media="(min-width: 768px)"></source>
+                    <img src="./img/logos.png" alt="Study Logotypes">
                 </picture>
             </div>
 
             <div class="first-stats">
                 <div class="first-stats__block">
                     <div class="first-stats__likes">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_2237_5525)"><path d="M4.66659 14.6666V7.33331M1.33325 8.66665V13.3333C1.33325 14.0697 1.93021 14.6666 2.66659 14.6666H11.6174C12.6046 14.6666 13.4441 13.9464 13.5942 12.9708L14.3121 8.30409C14.4985 7.09258 13.5611 5.99998 12.3354 5.99998H9.99992C9.63173 5.99998 9.33325 5.7015 9.33325 5.33331V2.97721C9.33325 2.06931 8.59726 1.33331 7.68936 1.33331C7.47281 1.33331 7.27657 1.46084 7.18862 1.65873L4.84254 6.9374C4.73554 7.17816 4.4968 7.33331 4.23334 7.33331H2.66659C1.93021 7.33331 1.33325 7.93027 1.33325 8.66665Z" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_2237_5525"><rect width="16" height="16" fill="white"/></clipPath></defs>
+                        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2237_5525)"><path d="M4.66659 14.6666V7.33331M1.33325 8.66665V13.3333C1.33325 14.0697 1.93021 14.6666 2.66659 14.6666H11.6174C12.6046 14.6666 13.4441 13.9464 13.5942 12.9708L14.3121 8.30409C14.4985 7.09258 13.5611 5.99998 12.3354 5.99998H9.99992C9.63173 5.99998 9.33325 5.7015 9.33325 5.33331V2.97721C9.33325 2.06931 8.59726 1.33331 7.68936 1.33331C7.47281 1.33331 7.27657 1.46084 7.18862 1.65873L4.84254 6.9374C4.73554 7.17816 4.4968 7.33331 4.23334 7.33331H2.66659C1.93021 7.33331 1.33325 7.93027 1.33325 8.66665Z" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clippath id="clip0_2237_5525"><rect width="16" height="16" fill="white"></rect></clippath></defs>
                         </svg>
 
                         5267
                     </div>
 
                     <div class="first-stats__likes">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 8C14 11.3137 11.3137 14 8 14C7.2019 14 6.4402 13.8442 5.74366 13.5613C5.61035 13.5072 5.54369 13.4801 5.48981 13.468C5.43711 13.4562 5.3981 13.4519 5.34409 13.4519C5.28887 13.4519 5.22872 13.4619 5.10843 13.4819L2.73651 13.8772C2.48812 13.9186 2.36393 13.9393 2.27412 13.9008C2.19552 13.8671 2.13289 13.8045 2.09917 13.7259C2.06065 13.6361 2.08135 13.5119 2.12275 13.2635L2.51807 10.8916C2.53812 10.7713 2.54814 10.7111 2.54814 10.6559C2.54813 10.6019 2.54381 10.5629 2.532 10.5102C2.51992 10.4563 2.49285 10.3897 2.43871 10.2563C2.15582 9.5598 2 8.7981 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 8C14 11.3137 11.3137 14 8 14C7.2019 14 6.4402 13.8442 5.74366 13.5613C5.61035 13.5072 5.54369 13.4801 5.48981 13.468C5.43711 13.4562 5.3981 13.4519 5.34409 13.4519C5.28887 13.4519 5.22872 13.4619 5.10843 13.4819L2.73651 13.8772C2.48812 13.9186 2.36393 13.9393 2.27412 13.9008C2.19552 13.8671 2.13289 13.8045 2.09917 13.7259C2.06065 13.6361 2.08135 13.5119 2.12275 13.2635L2.51807 10.8916C2.53812 10.7713 2.54814 10.7111 2.54814 10.6559C2.54813 10.6019 2.54381 10.5629 2.532 10.5102C2.51992 10.4563 2.49285 10.3897 2.43871 10.2563C2.15582 9.5598 2 8.7981 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
 
                         36,158
                     </div>
 
-                    <img class="first-stats__icons" src="img/icon-like-heart.svg" alt="">
+                    <img class="first-stats__icons" src="./img/icon-like-heart.svg" alt="">
                 </div>
             </div>
 
             <div class="first-comments">
                 <div class="first-comments__block">
                     <div class="first-comments__item first-comments__beforeanswer">
-                        <img class="first-comments__avatar" src="img/ava/1.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/1.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -112,13 +123,13 @@
                                     <span>2h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">48<img src="img/icon-like-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">48<img src="./img/icon-like-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item first-comments__answer">
-                        <img class="first-comments__avatar" src="img/ava/2.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/2.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -132,13 +143,13 @@
                                     <span>1h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">32<img src="img/icon-like.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">32<img src="./img/icon-like.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="first-comments__item">
-                        <img class="first-comments__avatar" src="img/ava/3.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/3.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -156,7 +167,7 @@
                     </div>
                     
                     <div class="first-comments__item">
-                        <img class="first-comments__avatar" src="img/ava/4.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/4.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -170,13 +181,13 @@
                                     <span>5h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">72<img src="img/icon-like-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">72<img src="./img/icon-like-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item first-comments__beforeanswer">
-                        <img class="first-comments__avatar" src="img/ava/5.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/5.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -190,13 +201,13 @@
                                     <span>6h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">24<img src="img/icon-like.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">24<img src="./img/icon-like.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item first-comments__answer">
-                        <img class="first-comments__avatar" src="img/ava/6.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/6.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -210,13 +221,13 @@
                                     <span>3h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">12<img src="img/icon-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">12<img src="./img/icon-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item">
-                        <img class="first-comments__avatar" src="img/ava/7.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/7.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -230,13 +241,13 @@
                                     <span>11h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">32<img src="img/icon-like-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">32<img src="./img/icon-like-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item">
-                        <img class="first-comments__avatar" src="img/ava/8.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/8.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -250,7 +261,7 @@
                                     <span>14h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">32<img src="img/icon-like-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">32<img src="./img/icon-like-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -258,7 +269,7 @@
 
                 <div class="first-comments__block">
                     <div class="first-comments__item">
-                        <img class="first-comments__avatar" src="img/ava/9.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/9.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -272,13 +283,13 @@
                                     <span>15h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">123<img src="img/icon-like-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">123<img src="./img/icon-like-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item">
-                        <img class="first-comments__avatar" src="img/ava/10.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/10.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -292,13 +303,13 @@
                                     <span>15h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">4<img src="img/icon-like-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">4<img src="./img/icon-like-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item first-comments__beforeanswer">
-                        <img class="first-comments__avatar" src="img/ava/11.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/11.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -312,13 +323,13 @@
                                     <span>17h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">7<img src="img/icon-like-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">7<img src="./img/icon-like-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item first-comments__answer">
-                        <img class="first-comments__avatar" src="img/ava/12.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/12.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -332,13 +343,13 @@
                                     <span>10h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">29<img src="img/icon-like.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">29<img src="./img/icon-like.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item">
-                        <img class="first-comments__avatar" src="img/ava/13.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/13.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -352,13 +363,13 @@
                                     <span>20h</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">37<img src="img/icon-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">37<img src="./img/icon-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item first-comments__beforeanswer">
-                        <img class="first-comments__avatar" src="img/ava/14.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/14.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -372,13 +383,13 @@
                                     <span>1d</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">24<img src="img/icon-like-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">24<img src="./img/icon-like-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="first-comments__item first-comments__answer">
-                        <img class="first-comments__avatar" src="img/ava/15.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/15.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -396,7 +407,7 @@
                     </div>
                     
                     <div class="first-comments__item">
-                        <img class="first-comments__avatar" src="img/ava/16.jpg" alt="">
+                        <img class="first-comments__avatar" src="./img/ava/16.jpg" alt="">
 
                         <div class="first-comments__rev">
                             <div class="first-comments__rev-block">
@@ -410,7 +421,7 @@
                                     <span>1d</span>·<span>Like</span>·<span>Reply</span>
                                 </div>
 
-                                <div class="first-comments__rev-bottom-right">18<img src="img/icon-like-heart.svg" alt=""></div>
+                                <div class="first-comments__rev-bottom-right">18<img src="./img/icon-like-heart.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -423,30 +434,18 @@
                 </div>
             </div>
 
-            <div class="show-bottom hidden">
-                <div class="show-bottom__content">
-                    <div class="show-bottom__text">
-                        <p class="show-bottom__text-top">BUY 3 + GET 2 FREE</p>
-                        <p class="show-bottom__text-bottom">Today's Discount</p>
-                    </div>
-
-                    <button class="show-bottom__button">
-                        YES, SHOW ME <span>THE OFFER »</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="show-full hidden">
+            <div class="show-full">
                 <div class="show-full__content">
                     <div class="show-full__close">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 1L1 11M1 1L11 11" stroke="#990000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L1 11M1 1L11 11" stroke="#990000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </div>
                     <div class="show-full__title">WAIT! LIMITED TIME OFFER</div>
-                    <div class="show-full__subtitle">Claim Your Discount Before <span>Today's Batch Sells Out!</span></div>
-                    <button class="show-full__button">YES, SHOW ME THE OFFER <span>»</span></button>
-                    <a class="show-full__decline">No, I'll Miss Out On This Offer</a>
+                    <div class="show-full__buttons">
+                        <button class="show-full__button">YES, SHOW ME THE OFFER <span>»</span></button>
+                        <button class="show-full__no-thanks">NO THANKS</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -455,9 +454,9 @@
             <div class="offer-top">
                 <div class="offer-complete">
                     <div class="offer-complete__top">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22.3286C17.5228 22.3286 22 17.8515 22 12.3286C22 6.80577 17.5228 2.32861 12 2.32861C6.47715 2.32861 2 6.80577 2 12.3286C2 17.8515 6.47715 22.3286 12 22.3286Z" fill="white"/>
-                            <path d="M7.5 12.3286L10.5 15.3286L16.5 9.32861" stroke="#079850" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22.3286C17.5228 22.3286 22 17.8515 22 12.3286C22 6.80577 17.5228 2.32861 12 2.32861C6.47715 2.32861 2 6.80577 2 12.3286C2 17.8515 6.47715 22.3286 12 22.3286Z" fill="white"></path>
+                            <path d="M7.5 12.3286L10.5 15.3286L16.5 9.32861" stroke="#079850" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
 
                         VIDEO COMPLETE
@@ -474,36 +473,34 @@
                             <p class="offer-complete__expire-text">Offer Expires In:</p>
 
                             <div class="offer-complete__timer">
-                                <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.5 23.3001H19.5" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
-                                    <path d="M5.5 45.4L22.8867 40.7413" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
-                                    <path d="M5.5 1.50037L22.8867 6.15911" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
+                                <svg width="25" height="47" viewbox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 23.3001H19.5" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"></path>
+                                    <path d="M5.5 45.4L22.8867 40.7413" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"></path>
+                                    <path d="M5.5 1.50037L22.8867 6.15911" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"></path>
                                 </svg>
 
                                 <div class="offer-complete__timer-item">
                                     <span class="offer-complete__timer-item-min"></span>:<span class="offer-complete__timer-item-sec"></span>
                                 </div>
 
-                                <svg width="25" height="47" viewBox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22.8872 23.3001H4.88721" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
-                                    <path d="M18.8872 45.4L1.50054 40.7413" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
-                                    <path d="M18.8872 1.50037L1.50054 6.15911" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
+                                <svg width="25" height="47" viewbox="0 0 25 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.8872 23.3001H4.88721" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"></path>
+                                    <path d="M18.8872 45.4L1.50054 40.7413" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"></path>
+                                    <path d="M18.8872 1.50037L1.50054 6.15911" stroke="#01491A" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"></path>
                                 </svg>
                             </div>
                         </div>
 
                         <div class="offer-complete__link">
-                            <a
-                                href="https://trackscope24.com/click?lp=1"
-                            >
+                            <a href="{{link}}">
                                 CHECK AVAILABILITY <span>»</span>
                             </a>
                         </div>
 
                         <div class="offer-complete__rating">
-                            <svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0H17.625V18H0V0ZM19.0938 0H36.7188V18H19.0938V0ZM38.1875 0H55.8125V18H38.1875V0ZM57.2812 0H74.9062V18H57.2812V0ZM76.375 0H94V18H76.375V0Z" fill="#00B67A"/>
-                                <path d="M8.8123 12.1313L11.4928 11.4375L12.6127 14.9625L8.8123 12.1313ZM14.981 7.57504H10.2627L8.8123 3.03754L7.36191 7.57504H2.64355L6.4623 10.3875L5.01191 14.925L8.83066 12.1125L11.1807 10.3875L14.981 7.57504ZM27.906 12.1313L30.5865 11.4375L31.7064 14.9625L27.906 12.1313ZM34.0748 7.57504H29.3564L27.906 3.03754L26.4556 7.57504H21.7373L25.556 10.3875L24.1056 14.925L27.9244 12.1125L30.2744 10.3875L34.0748 7.57504ZM46.9998 12.1313L49.6802 11.4375L50.8002 14.9625L46.9998 12.1313ZM53.1685 7.57504H48.4502L46.9998 3.03754L45.5494 7.57504H40.831L44.6498 10.3875L43.1994 14.925L47.0181 12.1125L49.3681 10.3875L53.1685 7.57504ZM66.0935 12.1313L68.774 11.4375L69.8939 14.9625L66.0935 12.1313ZM72.2623 7.57504H67.5439L66.0935 3.03754L64.6431 7.57504H59.9248L63.7435 10.3875L62.2931 14.925L66.1119 12.1125L68.4619 10.3875L72.2623 7.57504ZM85.1872 12.1313L87.8677 11.4375L88.9876 14.9625L85.1872 12.1313ZM91.356 7.57504H86.6376L85.1872 3.03754L83.7368 7.57504H79.0185L82.8372 10.3875L81.3868 14.925L85.2056 12.1125L87.5556 10.3875L91.356 7.57504Z" fill="white"/>
+                            <svg width="94" height="18" viewbox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0H17.625V18H0V0ZM19.0938 0H36.7188V18H19.0938V0ZM38.1875 0H55.8125V18H38.1875V0ZM57.2812 0H74.9062V18H57.2812V0ZM76.375 0H94V18H76.375V0Z" fill="#00B67A"></path>
+                                <path d="M8.8123 12.1313L11.4928 11.4375L12.6127 14.9625L8.8123 12.1313ZM14.981 7.57504H10.2627L8.8123 3.03754L7.36191 7.57504H2.64355L6.4623 10.3875L5.01191 14.925L8.83066 12.1125L11.1807 10.3875L14.981 7.57504ZM27.906 12.1313L30.5865 11.4375L31.7064 14.9625L27.906 12.1313ZM34.0748 7.57504H29.3564L27.906 3.03754L26.4556 7.57504H21.7373L25.556 10.3875L24.1056 14.925L27.9244 12.1125L30.2744 10.3875L34.0748 7.57504ZM46.9998 12.1313L49.6802 11.4375L50.8002 14.9625L46.9998 12.1313ZM53.1685 7.57504H48.4502L46.9998 3.03754L45.5494 7.57504H40.831L44.6498 10.3875L43.1994 14.925L47.0181 12.1125L49.3681 10.3875L53.1685 7.57504ZM66.0935 12.1313L68.774 11.4375L69.8939 14.9625L66.0935 12.1313ZM72.2623 7.57504H67.5439L66.0935 3.03754L64.6431 7.57504H59.9248L63.7435 10.3875L62.2931 14.925L66.1119 12.1125L68.4619 10.3875L72.2623 7.57504ZM85.1872 12.1313L87.8677 11.4375L88.9876 14.9625L85.1872 12.1313ZM91.356 7.57504H86.6376L85.1872 3.03754L83.7368 7.57504H79.0185L82.8372 10.3875L81.3868 14.925L85.2056 12.1125L87.5556 10.3875L91.356 7.57504Z" fill="white"></path>
                             </svg>
 
                             4.8/5 rating. Over 24,800 reviews.
@@ -515,8 +512,8 @@
                 <div class="offer-top-two">
                     <div class="offer-take-back">
                         <picture>
-                            <source srcset="img/offer-img-desk.png" media="(min-width: 768px)" />
-                            <img class="offer-take-back__img" src="img/offer-img.png" alt="Vital Hemp">
+                            <source srcset="./img/offer-img-desk.png" media="(min-width: 768px)"></source>
+                            <img class="offer-take-back__img" src="./img/offer-img.png" alt="Vital Hemp">
                         </picture>                        
 
                         <div class="offer-take-back__content">
@@ -534,35 +531,32 @@
 
                             <div class="offer-take-back__advantages">
                                 <div class="offer-take-back__advantages-item">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.00016 14.6666C11.6821 14.6666 14.6668 11.6819 14.6668 7.99998C14.6668 4.31808 11.6821 1.33331 8.00016 1.33331C4.31826 1.33331 1.3335 4.31808 1.3335 7.99998C1.3335 11.6819 4.31826 14.6666 8.00016 14.6666Z" fill="#079850"/>
-                                        <path d="M5 8L7 10L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.00016 14.6666C11.6821 14.6666 14.6668 11.6819 14.6668 7.99998C14.6668 4.31808 11.6821 1.33331 8.00016 1.33331C4.31826 1.33331 1.3335 4.31808 1.3335 7.99998C1.3335 11.6819 4.31826 14.6666 8.00016 14.6666Z" fill="#079850"></path>
+                                        <path d="M5 8L7 10L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
 
                                     No Pads
                                 </div>
                                 
                                 <div class="offer-take-back__advantages-item">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.00016 14.6666C11.6821 14.6666 14.6668 11.6819 14.6668 7.99998C14.6668 4.31808 11.6821 1.33331 8.00016 1.33331C4.31826 1.33331 1.3335 4.31808 1.3335 7.99998C1.3335 11.6819 4.31826 14.6666 8.00016 14.6666Z" fill="#079850"/>
-                                        <path d="M5 8L7 10L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.00016 14.6666C11.6821 14.6666 14.6668 11.6819 14.6668 7.99998C14.6668 4.31808 11.6821 1.33331 8.00016 1.33331C4.31826 1.33331 1.3335 4.31808 1.3335 7.99998C1.3335 11.6819 4.31826 14.6666 8.00016 14.6666Z" fill="#079850"></path>
+                                        <path d="M5 8L7 10L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
 
                                     No Surgery
                                 </div>
                             </div>
 
-                            <a 
-                                class="offer-take-back__link"
-                                href="https://trackscope24.com/click?lp=1"
-                            >
+                            <a class="offer-take-back__link" href="{{link}}">
                                 ORDER NOW <span>»</span>
                             </a>
                         </div>
                     </div>
 
                     <div class="offer-recommend">
-                        <img src="img/offer-recommend.png" alt="Achivements">
+                        <img src="./img/offer-recommend.png" alt="Achivements">
                     </div>
                 </div>
             </div>
@@ -573,62 +567,41 @@
                 </h2>
 
                 <div class="offer-comments__rating">
-                    <svg width="94" height="18" viewBox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0H17.625V18H0V0ZM19.0938 0H36.7188V18H19.0938V0ZM38.1875 0H55.8125V18H38.1875V0ZM57.2812 0H74.9062V18H57.2812V0ZM76.375 0H94V18H76.375V0Z" fill="#00B67A"/>
-                        <path d="M8.8123 12.1313L11.4928 11.4375L12.6127 14.9625L8.8123 12.1313ZM14.981 7.57504H10.2627L8.8123 3.03754L7.36191 7.57504H2.64355L6.4623 10.3875L5.01191 14.925L8.83066 12.1125L11.1807 10.3875L14.981 7.57504ZM27.906 12.1313L30.5865 11.4375L31.7064 14.9625L27.906 12.1313ZM34.0748 7.57504H29.3564L27.906 3.03754L26.4556 7.57504H21.7373L25.556 10.3875L24.1056 14.925L27.9244 12.1125L30.2744 10.3875L34.0748 7.57504ZM46.9998 12.1313L49.6802 11.4375L50.8002 14.9625L46.9998 12.1313ZM53.1685 7.57504H48.4502L46.9998 3.03754L45.5494 7.57504H40.831L44.6498 10.3875L43.1994 14.925L47.0181 12.1125L49.3681 10.3875L53.1685 7.57504ZM66.0935 12.1313L68.774 11.4375L69.8939 14.9625L66.0935 12.1313ZM72.2623 7.57504H67.5439L66.0935 3.03754L64.6431 7.57504H59.9248L63.7435 10.3875L62.2931 14.925L66.1119 12.1125L68.4619 10.3875L72.2623 7.57504ZM85.1872 12.1313L87.8677 11.4375L88.9876 14.9625L85.1872 12.1313ZM91.356 7.57504H86.6376L85.1872 3.03754L83.7368 7.57504H79.0185L82.8372 10.3875L81.3868 14.925L85.2056 12.1125L87.5556 10.3875L91.356 7.57504Z" fill="white"/>
+                    <svg width="94" height="18" viewbox="0 0 94 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0H17.625V18H0V0ZM19.0938 0H36.7188V18H19.0938V0ZM38.1875 0H55.8125V18H38.1875V0ZM57.2812 0H74.9062V18H57.2812V0ZM76.375 0H94V18H76.375V0Z" fill="#00B67A"></path>
+                        <path d="M8.8123 12.1313L11.4928 11.4375L12.6127 14.9625L8.8123 12.1313ZM14.981 7.57504H10.2627L8.8123 3.03754L7.36191 7.57504H2.64355L6.4623 10.3875L5.01191 14.925L8.83066 12.1125L11.1807 10.3875L14.981 7.57504ZM27.906 12.1313L30.5865 11.4375L31.7064 14.9625L27.906 12.1313ZM34.0748 7.57504H29.3564L27.906 3.03754L26.4556 7.57504H21.7373L25.556 10.3875L24.1056 14.925L27.9244 12.1125L30.2744 10.3875L34.0748 7.57504ZM46.9998 12.1313L49.6802 11.4375L50.8002 14.9625L46.9998 12.1313ZM53.1685 7.57504H48.4502L46.9998 3.03754L45.5494 7.57504H40.831L44.6498 10.3875L43.1994 14.925L47.0181 12.1125L49.3681 10.3875L53.1685 7.57504ZM66.0935 12.1313L68.774 11.4375L69.8939 14.9625L66.0935 12.1313ZM72.2623 7.57504H67.5439L66.0935 3.03754L64.6431 7.57504H59.9248L63.7435 10.3875L62.2931 14.925L66.1119 12.1125L68.4619 10.3875L72.2623 7.57504ZM85.1872 12.1313L87.8677 11.4375L88.9876 14.9625L85.1872 12.1313ZM91.356 7.57504H86.6376L85.1872 3.03754L83.7368 7.57504H79.0185L82.8372 10.3875L81.3868 14.925L85.2056 12.1125L87.5556 10.3875L91.356 7.57504Z" fill="white"></path>
                     </svg>
 
                     4.8/5 rating. Over 24,800 reviews.
                 </div>
 
                 <div class="offer-comments__link-images">
-                    <a 
-                        class="offer-comments__link-images-item"
-                        href="#diane"
-                    >
-                        <img class="offer-comments__link-images-item-image" src="img/reviews/diane-img-1.jpg" alt="Diane Foster">
+                    <a class="offer-comments__link-images-item" href="#diane">
+                        <img class="offer-comments__link-images-item-image" src="./img/reviews/diane-img-1.jpg" alt="Diane Foster">
                     </a>
                     
-                    <a 
-                        class="offer-comments__link-images-item"
-                        href="#kennedy"
-                    >
-                        <img class="offer-comments__link-images-item-image" src="img/reviews/kennedy-img-1.jpg" alt="Kennedy Byrne">
+                    <a class="offer-comments__link-images-item" href="#kennedy">
+                        <img class="offer-comments__link-images-item-image" src="./img/reviews/kennedy-img-1.jpg" alt="Kennedy Byrne">
                     </a>
                     
-                    <a 
-                        class="offer-comments__link-images-item"
-                        href="#annie"
-                    >
-                        <img class="offer-comments__link-images-item-image" src="img/reviews/annie-img-1.jpg" alt="Annie Patterson">
+                    <a class="offer-comments__link-images-item" href="#annie">
+                        <img class="offer-comments__link-images-item-image" src="./img/reviews/annie-img-1.jpg" alt="Annie Patterson">
                     </a>
                     
-                    <a 
-                        class="offer-comments__link-images-item"
-                        href="#ava"
-                    >
-                        <img class="offer-comments__link-images-item-image" src="img/reviews/ava-img-1.jpg" alt="Ava Hill">
+                    <a class="offer-comments__link-images-item" href="#ava">
+                        <img class="offer-comments__link-images-item-image" src="./img/reviews/ava-img-1.jpg" alt="Ava Hill">
                     </a>
                     
-                    <a 
-                        class="offer-comments__link-images-item"
-                        href="#catherine"
-                    >
-                        <img class="offer-comments__link-images-item-image" src="img/reviews/catherine-img-1.jpg" alt="Catherine Moore">
+                    <a class="offer-comments__link-images-item" href="#catherine">
+                        <img class="offer-comments__link-images-item-image" src="./img/reviews/catherine-img-1.jpg" alt="Catherine Moore">
                     </a>
                     
-                    <a 
-                        class="offer-comments__link-images-item"
-                        href="#diane"
-                    >
-                        <img class="offer-comments__link-images-item-image" src="img/reviews/diane-img-2.jpg" alt="Diane Foster">
+                    <a class="offer-comments__link-images-item" href="#diane">
+                        <img class="offer-comments__link-images-item-image" src="./img/reviews/diane-img-2.jpg" alt="Diane Foster">
                     </a>
                     
-                    <a 
-                        class="offer-comments__link-images-item"
-                        href="#susan"
-                    >
-                        <img class="offer-comments__link-images-item-image" src="img/reviews/susan-img-2.jpg" alt="Susan Miller">
+                    <a class="offer-comments__link-images-item" href="#susan">
+                        <img class="offer-comments__link-images-item-image" src="./img/reviews/susan-img-2.jpg" alt="Susan Miller">
                     </a>
                 </div>
 
@@ -637,25 +610,25 @@
                         <div class="offer-comments__rev-top">
                             <div class="offer-comments__rev-info">
                                 <div class="offer-comments__rev-avatar">
-                                    <img alt="Ava Hill" src="img/reviews/ava.jpg" />
+                                    <img alt="Ava Hill" src="./img/reviews/ava.jpg">
                                 </div>
                                 <div class="offer-comments__rev-cred">
                                     <div class="offer-comments__rev-name"> Ava Hill </div>
-                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="img/verif.svg" />
+                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="./img/verif.svg">
                                     </div>
                                 </div>
                             </div>
                             <div class="offer-comments__rev-stars">
-                                <img alt="4.5 Rating" src="img/rev-stars4.svg" />
+                                <img alt="4.5 Rating" src="./img/rev-stars4.svg">
                             </div>
                         </div>
                         <div class="offer-comments__rev-recommend">
-                            <img alt="I recommend this product" src="img/icon-like.svg" /> I recommend this product
+                            <img alt="I recommend this product" src="./img/icon-like.svg"> I recommend this product
                         </div>
                     </div>
                     <div class="offer-comments__center">
                         <div class="offer-comments__rev-stars">
-                            <img alt="4.5 Rating" src="img/rev-stars4.svg" />
+                            <img alt="4.5 Rating" src="./img/rev-stars4.svg">
                         </div>
                         <h4 class="offer-comments__rev-center-title"> It's Working </h4>
                         <div class="offer-comments__rev-text-wrapper">
@@ -663,9 +636,9 @@
                         </div>
                         <div class="offer-comments__rev-images">
                             <a href="video/ava.mp4" class="glightbox2" data-gallery="video-ava1">
-                                <img alt="Ava Hill" src="img/reviews/ava-img-1.jpg"/>
+                                <img alt="Ava Hill" src="./img/reviews/ava-img-1.jpg">
                             </a>
-                            <img alt="Ava Hill" src="img/reviews/ava-img-2.jpg" />
+                            <img alt="Ava Hill" src="./img/reviews/ava-img-2.jpg">
                         </div>
                         <div class="offer-comments__rev-helpful">
                             <span> Was this helpful? </span>
@@ -688,9 +661,9 @@
                     <div class="offer-comments__right">
                         <div class="offer-comments__rev-images">
                             <a href="video/ava.mp4" class="glightbox2" data-gallery="video-ava2">
-                                <img alt="Ava Hill" src="img/reviews/ava-img-1.jpg"/>
+                                <img alt="Ava Hill" src="./img/reviews/ava-img-1.jpg">
                             </a>
-                            <img alt="Ava Hill" src="img/reviews/ava-img-2.jpg" />
+                            <img alt="Ava Hill" src="./img/reviews/ava-img-2.jpg">
                         </div>
                     </div>
                 </div>
@@ -699,33 +672,33 @@
                         <div class="offer-comments__rev-top">
                             <div class="offer-comments__rev-info">
                                 <div class="offer-comments__rev-avatar">
-                                    <img alt="Catherine Moore" src="img/reviews/catherine.jpg" />
+                                    <img alt="Catherine Moore" src="./img/reviews/catherine.jpg">
                                 </div>
                                 <div class="offer-comments__rev-cred">
                                     <div class="offer-comments__rev-name"> Catherine Moore </div>
-                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="img/verif.svg" />
+                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="./img/verif.svg">
                                     </div>
                                 </div>
                             </div>
                             <div class="offer-comments__rev-stars">
-                                <img alt="5 Rating" src="img/rev-stars5.svg" />
+                                <img alt="5 Rating" src="./img/rev-stars5.svg">
                             </div>
                         </div>
                         <div class="offer-comments__rev-recommend">
-                            <img alt="I recommend this product" src="img/icon-like.svg" /> I recommend this product
+                            <img alt="I recommend this product" src="./img/icon-like.svg"> I recommend this product
                         </div>
                     </div>
                     <div class="offer-comments__center">
                         <div class="offer-comments__rev-stars">
-                            <img alt="5 Rating" src="img/rev-stars5.svg" />
+                            <img alt="5 Rating" src="./img/rev-stars5.svg">
                         </div>
                         <h4 class="offer-comments__rev-center-title"> Almost Perfect </h4>
                         <div class="offer-comments__rev-text-wrapper">
                             <p class="offer-comments__rev-text"> Four stars only because the gummies are quite sweet for my taste. Everything else - the results, the delivery, the guarantee - all five stars. The night urgency is almost completely gone after three weeks. </p>
                         </div>
                         <div class="offer-comments__rev-images">
-                            <img alt="Catherine Moore" src="img/reviews/catherine-img-1.jpg" />
-                            <img alt="Catherine Moore" src="img/reviews/catherine-img-2.jpg" />
+                            <img alt="Catherine Moore" src="./img/reviews/catherine-img-1.jpg">
+                            <img alt="Catherine Moore" src="./img/reviews/catherine-img-2.jpg">
                         </div>
                         <div class="offer-comments__rev-helpful">
                             <span> Was this helpful? </span>
@@ -747,8 +720,8 @@
                     </div>
                     <div class="offer-comments__right">
                         <div class="offer-comments__rev-images">
-                            <img alt="Catherine Moore" src="img/reviews/catherine-img-1.jpg" />
-                            <img alt="Catherine Moore" src="img/reviews/catherine-img-2.jpg" />
+                            <img alt="Catherine Moore" src="./img/reviews/catherine-img-1.jpg">
+                            <img alt="Catherine Moore" src="./img/reviews/catherine-img-2.jpg">
                         </div>
                     </div>
                 </div>
@@ -757,32 +730,32 @@
                         <div class="offer-comments__rev-top">
                             <div class="offer-comments__rev-info">
                                 <div class="offer-comments__rev-avatar">
-                                    <img alt="Kennedy Byrne" src="img/reviews/kennedy.jpg" />
+                                    <img alt="Kennedy Byrne" src="./img/reviews/kennedy.jpg">
                                 </div>
                                 <div class="offer-comments__rev-cred">
                                     <div class="offer-comments__rev-name"> Kennedy Byrne </div>
-                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="img/verif.svg" />
+                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="./img/verif.svg">
                                     </div>
                                 </div>
                             </div>
                             <div class="offer-comments__rev-stars">
-                                <img alt="4.5 Rating" src="img/rev-stars4.svg" />
+                                <img alt="4.5 Rating" src="./img/rev-stars4.svg">
                             </div>
                         </div>
                         <div class="offer-comments__rev-recommend">
-                            <img alt="I recommend this product" src="img/icon-like.svg" /> I recommend this product
+                            <img alt="I recommend this product" src="./img/icon-like.svg"> I recommend this product
                         </div>
                     </div>
                     <div class="offer-comments__center">
                         <div class="offer-comments__rev-stars">
-                            <img alt="4.5 Rating" src="img/rev-stars4.svg" />
+                            <img alt="4.5 Rating" src="./img/rev-stars4.svg">
                         </div>
                         <h4 class="offer-comments__rev-center-title"> Doctor Approved </h4>
                         <div class="offer-comments__rev-text-wrapper">
                             <p class="offer-comments__rev-text"> Just turned 61 and this started after menopause. My hormone levels came back low which my doctor said explained a lot. She actually said the ingredients in this made sense from a hormonal inflammation standpoint. That was enough for me. </p>
                         </div>
                         <div class="offer-comments__rev-images">
-                            <img alt="Kennedy Byrne" src="img/reviews/kennedy-img-1.jpg" />
+                            <img alt="Kennedy Byrne" src="./img/reviews/kennedy-img-1.jpg">
                         </div>
                         <div class="offer-comments__rev-helpful">
                             <span> Was this helpful? </span>
@@ -804,7 +777,7 @@
                     </div>
                     <div class="offer-comments__right">
                         <div class="offer-comments__rev-images">
-                            <img alt="Kennedy Byrne" src="img/reviews/kennedy-img-1.jpg" />
+                            <img alt="Kennedy Byrne" src="./img/reviews/kennedy-img-1.jpg">
                         </div>
                     </div>
                 </div>
@@ -813,34 +786,34 @@
                         <div class="offer-comments__rev-top">
                             <div class="offer-comments__rev-info">
                                 <div class="offer-comments__rev-avatar">
-                                    <img alt="Susan Miller" src="img/reviews/susan.jpg" />
+                                    <img alt="Susan Miller" src="./img/reviews/susan.jpg">
                                 </div>
                                 <div class="offer-comments__rev-cred">
                                     <div class="offer-comments__rev-name"> Susan Miller </div>
-                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="img/verif.svg" />
+                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="./img/verif.svg">
                                     </div>
                                 </div>
                             </div>
                             <div class="offer-comments__rev-stars">
-                                <img alt="5 Rating" src="img/rev-stars5.svg" />
+                                <img alt="5 Rating" src="./img/rev-stars5.svg">
                             </div>
                         </div>
                         <div class="offer-comments__rev-recommend">
-                            <img alt="I recommend this product" src="img/icon-like.svg" /> I recommend this product
+                            <img alt="I recommend this product" src="./img/icon-like.svg"> I recommend this product
                         </div>
                     </div>
                     <div class="offer-comments__center">
                         <div class="offer-comments__rev-stars">
-                            <img alt="5 Rating" src="img/rev-stars5.svg" />
+                            <img alt="5 Rating" src="./img/rev-stars5.svg">
                         </div>
                         <h4 class="offer-comments__rev-center-title"> A Real Difference </h4>
                         <div class="offer-comments__rev-text-wrapper">
                             <p class="offer-comments__rev-text"> Just turned 61 and this started after menopause. My hormone levels came back low which my doctor said explained a lot. She actually said the ingredients in this made sense from a hormonal inflammation standpoint. That was enough for me. </p>
                         </div>
                         <div class="offer-comments__rev-images">
-                            <img alt="Susan Miller" src="img/reviews/susan-img-1.jpg" />
+                            <img alt="Susan Miller" src="./img/reviews/susan-img-1.jpg">
                             <a href="video/susan.mp4" class="glightbox2" data-gallery="video-susan1">
-                                <img alt="Susan Miller" src="img/reviews/susan-img-2.jpg"/>
+                                <img alt="Susan Miller" src="./img/reviews/susan-img-2.jpg">
                             </a>
                         </div>
                         <div class="offer-comments__rev-helpful">
@@ -863,9 +836,9 @@
                     </div>
                     <div class="offer-comments__right">
                         <div class="offer-comments__rev-images">
-                            <img alt="Susan Miller" src="img/reviews/susan-img-1.jpg" />
+                            <img alt="Susan Miller" src="./img/reviews/susan-img-1.jpg">
                             <a href="video/susan.mp4" class="glightbox2" data-gallery="video-susan2">
-                                <img alt="Susan Miller" src="img/reviews/susan-img-2.jpg"/>
+                                <img alt="Susan Miller" src="./img/reviews/susan-img-2.jpg">
                             </a>
                         </div>
                     </div>
@@ -875,25 +848,25 @@
                         <div class="offer-comments__rev-top">
                             <div class="offer-comments__rev-info">
                                 <div class="offer-comments__rev-avatar">
-                                    <img alt="Diane Foster" src="img/reviews/diane.jpg" />
+                                    <img alt="Diane Foster" src="./img/reviews/diane.jpg">
                                 </div>
                                 <div class="offer-comments__rev-cred">
                                     <div class="offer-comments__rev-name"> Diane Foster </div>
-                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="img/verif.svg" />
+                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="./img/verif.svg">
                                     </div>
                                 </div>
                             </div>
                             <div class="offer-comments__rev-stars">
-                                <img alt="5 Rating" src="img/rev-stars5.svg" />
+                                <img alt="5 Rating" src="./img/rev-stars5.svg">
                             </div>
                         </div>
                         <div class="offer-comments__rev-recommend">
-                            <img alt="I recommend this product" src="img/icon-like.svg" /> I recommend this product
+                            <img alt="I recommend this product" src="./img/icon-like.svg"> I recommend this product
                         </div>
                     </div>
                     <div class="offer-comments__center">
                         <div class="offer-comments__rev-stars">
-                            <img alt="5 Rating" src="img/rev-stars5.svg" />
+                            <img alt="5 Rating" src="./img/rev-stars5.svg">
                         </div>
                         <h4 class="offer-comments__rev-center-title"> I Feel Better </h4>
                         <div class="offer-comments__rev-text-wrapper">
@@ -901,9 +874,9 @@
                         </div>
                         <div class="offer-comments__rev-images">
                             <a href="video/diane.mp4" class="glightbox2" data-gallery="video-diane1">
-                                <img alt="Diane Foster" src="img/reviews/diane-img-1.jpg"/>
+                                <img alt="Diane Foster" src="./img/reviews/diane-img-1.jpg">
                             </a>
-                            <img alt="Diane Foster" src="img/reviews/diane-img-2.jpg" />
+                            <img alt="Diane Foster" src="./img/reviews/diane-img-2.jpg">
                         </div>
                         <div class="offer-comments__rev-helpful">
                             <span> Was this helpful? </span>
@@ -926,9 +899,9 @@
                     <div class="offer-comments__right">
                         <div class="offer-comments__rev-images">
                             <a href="video/diane.mp4" class="glightbox2" data-gallery="video-diane2">
-                                <img alt="Diane Foster" src="img/reviews/diane-img-1.jpg"/>
+                                <img alt="Diane Foster" src="./img/reviews/diane-img-1.jpg">
                             </a>
-                            <img alt="Diane Foster" src="img/reviews/diane-img-2.jpg" />
+                            <img alt="Diane Foster" src="./img/reviews/diane-img-2.jpg">
                         </div>
                     </div>
                 </div>
@@ -937,32 +910,32 @@
                         <div class="offer-comments__rev-top">
                             <div class="offer-comments__rev-info">
                                 <div class="offer-comments__rev-avatar">
-                                    <img alt="Annie Patterson" src="img/reviews/annie.jpg" />
+                                    <img alt="Annie Patterson" src="./img/reviews/annie.jpg">
                                 </div>
                                 <div class="offer-comments__rev-cred">
                                     <div class="offer-comments__rev-name"> Annie Patterson </div>
-                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="img/verif.svg" />
+                                    <div class="offer-comments__rev-verif"> Verified Buyer <img alt="Verified Buyer" src="./img/verif.svg">
                                     </div>
                                 </div>
                             </div>
                             <div class="offer-comments__rev-stars">
-                                <img alt="5 Rating" src="img/rev-stars5.svg" />
+                                <img alt="5 Rating" src="./img/rev-stars5.svg">
                             </div>
                         </div>
                         <div class="offer-comments__rev-recommend">
-                            <img alt="I recommend this product" src="img/icon-like.svg" /> I recommend this product
+                            <img alt="I recommend this product" src="./img/icon-like.svg"> I recommend this product
                         </div>
                     </div>
                     <div class="offer-comments__center">
                         <div class="offer-comments__rev-stars">
-                            <img alt="5 Rating" src="img/rev-stars5.svg" />
+                            <img alt="5 Rating" src="./img/rev-stars5.svg">
                         </div>
                         <h4 class="offer-comments__rev-center-title"> The Leaking Improved </h4>
                         <div class="offer-comments__rev-text-wrapper">
                             <p class="offer-comments__rev-text"> I've been taking vital hemp for just under a month now. At my last checkup, my doctor noticed my inflammation markers had gone down, which was great news. I don't know if vital hemp is the reason, but it's one of the few things I've changed recently. The biggest difference for me has been that the leaking has improved significantly, and that's made a huge difference in my day-to-day life. </p>
                         </div>
                         <div class="offer-comments__rev-images">
-                            <img alt="Annie Patterson" src="img/reviews/annie-img-1.jpg" />
+                            <img alt="Annie Patterson" src="./img/reviews/annie-img-1.jpg">
                         </div>
                         <div class="offer-comments__rev-helpful">
                             <span> Was this helpful? </span>
@@ -984,7 +957,7 @@
                     </div>
                     <div class="offer-comments__right">
                         <div class="offer-comments__rev-images">
-                            <img alt="Annie Patterson" src="img/reviews/annie-img-1.jpg" />
+                            <img alt="Annie Patterson" src="./img/reviews/annie-img-1.jpg">
                         </div>
                     </div>
                 </div>
@@ -998,9 +971,9 @@
 
             <div class="offer-footer">
                 <picture>
-                    <source srcset="img/logos-desk.png" media="(min-width: 768px)">
-                    <img src="img/logos.png" alt="Study Logotypes">
-                </picture>
+                    <source srcset="./img/logos-desk.png" media="(min-width: 768px)">
+                    <img src="./img/logos.png" alt="Study Logotypes">
+                </source></picture>
             </div>
         </section>
     </main>
@@ -1022,18 +995,15 @@
 
             const firstPage = document.getElementById('first-page');
             const offerPage = document.getElementById('offer-page');
-            const showBottom = document.querySelector('.show-bottom');            
             const showFull = document.querySelector('.show-full');
             const pauseGif = document.querySelector('.first-video__pause');
 
-            document.querySelectorAll('.show-full__close, .show-full__decline').forEach((btn) => {
-                btn.addEventListener('click', () => {
-                    const block = btn.closest('.show-full');
+            document.querySelector('.show-full__no-thanks').addEventListener('click', () => {
+                showFull.classList.remove('show-full__anim');
 
-                    if (block) {
-                        block.style.display = 'none';
-                    }
-                });
+                setTimeout(() => {
+                    showFull.style.display = 'none';
+                }, 200);
             });
 
             document.querySelectorAll('.offer-comments__rev-buttons').forEach((buttonsBlock) => {
@@ -1237,12 +1207,8 @@
                         event.detail?.current ??
                         0;
 
-                    if (currentTime >= 120) {
-                        showBottom.classList.remove('hidden');
-                    }
-
-                    if (currentTime >= 240) {
-                        showFull.classList.remove('hidden');
+                    if (currentTime >= timeToPopup) {
+                        showFull.classList.add('show-full__anim');
                     }
                 });
 
@@ -1272,12 +1238,10 @@
                     }
                 }
 
-                document.querySelectorAll('.show-full__button, .show-bottom__button').forEach((btn) => {
-                    btn.addEventListener('click', () => {
-                        pauseVideo();
-                        startOfferTimer();
-                        showFormHideVideo()
-                    });
+                document.querySelector('.show-full__button').addEventListener('click', () => {
+                    pauseVideo();
+                    startOfferTimer();
+                    showFormHideVideo()
                 });
             }
 
@@ -1285,5 +1249,5 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-</body>
+{{aio}}</body>
 </html>
